@@ -16,18 +16,24 @@ public class Pr2 {
 
         //Задание 2
 
-        char [] string = {'q','w','e','r','t','y','u','i','o','p'};
-        char c=string[0];
-        string[0]=string[9];
-        string[9]=c;
-        string[4]=string[1];
-        string[1]=string[6];
+        char[] string = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'};
+        char c = string[0];
+        string[0] = string[9];
+        string[9] = c;
+        string[4] = string[1];
+        string[1] = string[6];
         System.out.println(string);
 
         //Задание 3
         String string2 = "Thinking in Java, Bruce Eckel";
         System.out.println(string2);
-        string2=string2.replace('a', ' ');
+        String string3 = "";
+        for (int k = 0; k < string2.length(); k++) {
+            if (string2.charAt(k) != 'a') {
+                string3 += string2.charAt(k);
+            }
+        }
+        string2 = string3;
         System.out.println(string2);
     }
 }
