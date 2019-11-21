@@ -24,7 +24,7 @@ public class Pr6 {
             direction[i] = random.nextInt(characteristics.direction.length);
             direction2[i] = random.nextInt(characteristics.direction.length);
             overall += Integer.parseInt(parameters.speed[direction[i]]);
-            overall2 += Integer.parseInt(parameters.speed[direction[i]]);
+            overall2 += Integer.parseInt(parameters.speed[direction2[i]]);
             /*
             System.out.printf("[%d-%ds]: \t", i, i + 1);
             if (direction[i] == 0) {
