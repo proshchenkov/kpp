@@ -15,61 +15,14 @@ public class Pr6 {
         Characteristics characteristics = new Characteristics();
         Parameters parameters = new Parameters();
         Random random = new Random();
-        int sec = 15;
-        int overall = 0;
-        int overall2 = 0;
-        int[] direction = new int[sec];
-        int[] direction2 = new int[sec];
-        /*for (int i = 0; i < sec; i++) {
-            direction[i] = random.nextInt(characteristics.direction.length);
-            direction2[i] = random.nextInt(characteristics.direction.length);
-            overall += Integer.parseInt(parameters.speed[direction[i]]);
-            overall2 += Integer.parseInt(parameters.speed[direction2[i]]);
-            System.out.printf("[%d-%ds]: \t", i, i + 1);
-            if (direction[i] == 0) {
-                System.out.print("||\t");
-            } else if (direction[i] == 1) {
-                System.out.print("//\t");
-            } else {
-                System.out.print("\\\\\t");
-            }
-            System.out.printf("Направление: %s \t Скорость: %s m/s\n", characteristics.direction[direction[i]], parameters.speed[direction[i]]);
-
-        }*/
+        int sec = 15, overall = 0, overall2 = 0, x = 5, y = 10;
+        int[] direction = new int[sec], direction2 = new int[sec];
         String[][] pos = new String[sec][sec];
-        int x = 7, y = 8;
         for (int i = 0; i < sec; i++) {
             for (int j = 0; j < sec; j++) {
                 pos[i][j] = "\u00B7";
             }
         }
-        /*for (int i = 0; i < sec; i++) {
-            if (direction[i] == 1) {
-                pos[i][x] = "/";
-                x--;
-            } else if (direction[i] == 2) {
-                pos[i][x] = "\\";
-                x++;
-            } else if (direction[i] == 0) {
-                pos[i][x] = "|";
-            }
-        }
-        for (int i = 0; i < sec; i++) {
-            if (pos[i][y] == "\u00B7") {
-                if (direction2[i] == 1) {
-                    pos[i][y] = "/";
-                    y--;
-                } else if (direction2[i] == 2) {
-                    pos[i][y] = "\\";
-                    y++;
-                } else if (direction2[i] == 0) {
-                    pos[i][y] = "|";
-                }
-            } else {
-                pos[i][y] = "X";
-                break;
-            }
-        }*/
         for (int i = 0; i < sec; i++) {
             direction[i] = random.nextInt(characteristics.direction.length);
             direction2[i] = random.nextInt(characteristics.direction.length);
@@ -84,13 +37,13 @@ public class Pr6 {
             }
             if (pos[i][y] == "\u00B7") {
                 if (direction2[i] == 1) {
-                    pos[i][y] = "/";
+                    pos[i][y] = "//";
                     y--;
                 } else if (direction2[i] == 2) {
-                    pos[i][y] = "\\";
+                    pos[i][y] = "\\\\";
                     y++;
                 } else if (direction2[i] == 0) {
-                    pos[i][y] = "|";
+                    pos[i][y] = "||";
                 }
             } else {
                 pos[i][y] = "X";
