@@ -28,7 +28,8 @@ public class Lab2 {
     private static String xor(String text) {
         String str = "";
         String pass = "СЕКРЕТ";
-        for (int i = 0; i < text.length(); i++) str += (char) ((text.charAt(i)) ^ pass.charAt(i % 6));
+        for (int i = 0; i < text.length(); i++)
+            str += alphabet.charAt(alphabet.indexOf(text.charAt(i)) ^ alphabet.indexOf(pass.charAt(i % 6)));
         return str;
     }
 
@@ -37,7 +38,7 @@ public class Lab2 {
     public static void main(String[] args) {
         int menu, shift;
         String text;
-        alphabet = " !,-.0123456789?";
+        alphabet = " .0123456789";
         Scanner scanner = new Scanner(System.in);
         for (int i = 1040; i < 1104; i++) alphabet += (char) i;
         for (int i = 65; i < 91; i++) alphabet += (char) i;
