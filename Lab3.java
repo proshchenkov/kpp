@@ -128,6 +128,7 @@ class FileManager {
             for (int i = (trim.length - 2); i > -1; i--) {
                 if (path.equals("")) {
                     path = trim[i] + path;
+                    continue;
                 }
                 path = trim[i] + "//" + path;
             }
