@@ -51,7 +51,6 @@ public class Lab3 {
             } else if (menu == 7) {
                 System.out.println("Введите директорию:");
                 name = scanner.next();
-                scanner.next();
                 fileManager.makeDirectory(name);
             } else if (menu == 0) {
                 System.out.println("Выход");
